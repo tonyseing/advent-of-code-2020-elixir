@@ -3,19 +3,51 @@ defmodule AdventOfCode.Day02Test do
 
   import AdventOfCode.Day02
 
-  @tag :skip
   test "part1" do
-    input = nil
+    input = [
+      %{
+        limits: {2, 3},
+        source: ["r", "y"],
+        target: "r"
+      },
+      %{
+        limits: {2, 3},
+        source: ["r", "y", "y"],
+        target: "y"
+      },
+      %{
+        limits: {0, 3},
+        source: ["r", "y", "y", "y"],
+        target: "y"
+      }
+    ]
+
     result = part1(input)
 
-    assert result
+    assert result == 2
   end
 
-  @tag :skip
   test "part2" do
-    input = nil
+    input = [
+      %{
+        indices: {1, 2},
+        source: ["r", "y"],
+        target: "r"
+      },
+      %{
+        indices: {2, 3},
+        source: ["r", "y", "y"],
+        target: "y"
+      },
+      %{
+        indices: {1, 3},
+        source: ["r", "y", "y", "y"],
+        target: "y"
+      }
+    ]
+
     result = part2(input)
 
-    assert result
+    assert result == 2
   end
 end
