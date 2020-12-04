@@ -3,19 +3,31 @@ defmodule AdventOfCode.Day03Test do
 
   import AdventOfCode.Day03
 
-  @tag :skip
   test "part1" do
-    input = nil
-    result = part1(input)
+    slope = {2, 1}
 
-    assert result
+    mapRows = [
+      [".", ".", "#", "."],
+      ["#", ".", "#", "#"],
+      [".", "#", ".", "."],
+      [".", ".", "#", "."]
+    ]
+
+    result = part1({mapRows, slope})
+
+    assert result == 2
   end
 
-  @tag :skip
   test "part2" do
-    input = nil
-    result = part2(input)
+    mapRows = [
+      [".", ".", "#", "."],
+      ["#", ".", "#", "#"],
+      [".", "#", ".", "."],
+      [".", ".", "#", "."]
+    ]
 
-    assert result
+    result = part2({mapRows, [{2, 1}, {2, 1}, {1, 1}]})
+
+    assert result == 0
   end
 end
